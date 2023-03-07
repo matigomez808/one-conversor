@@ -13,7 +13,7 @@ public class Aplicacion {
 	
 	private void presentarVentana(){
 		ventanaPrincipal miVentana = new ventanaPrincipal();
-		miVentana.asignarConversiones(misConversiones);
+//		miVentana.asignarConversiones(misConversiones);
 		miVentana.setVisible(true);
 	}
 	

@@ -35,7 +35,7 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JComboBox<String> miCombo;
-	private JButton btnConvertir;
+	private JButton btnConvertir, btnExit;
 	private JLabel lblValorConvertir, lblElegirConversion;
 	private Conversiones misConversiones;
 	private JTextField textRes;
@@ -51,11 +51,15 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
 
 		btnConvertir = new JButton("Convertir");
 		btnConvertir.setBounds(164, 125, 99, 25);
 		btnConvertir.addActionListener(this);
-		contentPane.setLayout(null);
+		
+		btnExit = new JButton("Cerrar");
+		btnExit.setBounds(157, 185, 117, 25);
+		btnExit.addActionListener(this);
 
 		lblElegirConversion = new JLabel("Elija tipo de conversion");
 		lblElegirConversion.setBounds(143, 12, 164, 15);
@@ -88,12 +92,17 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
 		textRes.setBounds(164, 172, 117, 19);
 		contentPane.add(textRes);
 		textRes.setColumns(10);
+		
+		
+		contentPane.add(btnExit);
 
 	}
 
 //	Implementación del método abstracto requerido por la interfaz ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		if (btnExit == e.getSource()) {System.exit(0);}
+		
 		miCombo.hidePopup();
 		
 		double input = Double.parseDouble(textField.getText());
@@ -164,8 +173,5 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
 
 	}
 
-	public void asignarConversiones(Conversiones misConversiones) {
-		this.misConversiones = misConversiones;
-
-	}
+	
 }
