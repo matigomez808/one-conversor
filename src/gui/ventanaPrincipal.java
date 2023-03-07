@@ -44,29 +44,30 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
 
 	public ventanaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 210, 302);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(119, 118, 123));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setTitle("Sprint Conversor by Mati Gomez");
+		setTitle("Conversor ONE");
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
 
 		btnConvertir = new JButton("Convertir");
-		btnConvertir.setBounds(164, 125, 99, 25);
 		btnConvertir.addActionListener(this);
 		
 		btnExit = new JButton("Cerrar");
-		btnExit.setBounds(157, 185, 117, 25);
 		btnExit.addActionListener(this);
+		FlowLayout fl_contentPane = new FlowLayout(FlowLayout.CENTER, 5, 10);
+		fl_contentPane.setAlignOnBaseline(true);
+		contentPane.setLayout(fl_contentPane);
 
 		lblElegirConversion = new JLabel("Elija tipo de conversion");
-		lblElegirConversion.setBounds(143, 12, 164, 15);
+		lblElegirConversion.setForeground(new Color(0, 0, 0));
 		contentPane.add(lblElegirConversion);
 
 		miCombo = new JComboBox<>();
-		miCombo.setBounds(164, 39, 110, 24);
+		miCombo.setForeground(new Color(0, 0, 0));
 		contentPane.add(miCombo);
 		miCombo.setModel(new DefaultComboBoxModel<String>(new String[] { "ARS -> USD", "USD -> ARS", "ARS -> EUR", "EUR -> ARS",
 				"ARS -> GBP", "GBP -> ARS", "ARS -> JPY", "JPY -> ARS", "ARS -> KPW", "KPW -> ARS" }));
@@ -75,12 +76,11 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
 		miCombo.addActionListener(this);
 
 		lblValorConvertir = new JLabel("Valor a convertir");
-		lblValorConvertir.setBounds(157, 68, 117, 15);
+		lblValorConvertir.setForeground(new Color(0, 0, 0));
 		contentPane.add(lblValorConvertir);
 
 		textField = new JTextField();
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
-		textField.setBounds(160, 94, 114, 19);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		getContentPane().add(btnConvertir);
@@ -89,7 +89,6 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
 		textRes.setHorizontalAlignment(SwingConstants.CENTER);
 		textRes.setForeground(new Color(0, 0, 0));
 		textRes.setEditable(false);
-		textRes.setBounds(164, 172, 117, 19);
 		contentPane.add(textRes);
 		textRes.setColumns(10);
 		
@@ -105,10 +104,11 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
 		
 		miCombo.hidePopup();
 		
-		double input = Double.parseDouble(textField.getText());
+//		double input = Double.parseDouble(textField.getText());
 		double r;
 		DecimalFormat df = new DecimalFormat("#.##");
 		if (btnConvertir == e.getSource()) {
+			double input = Double.parseDouble(textField.getText());
 			if (miCombo.getSelectedItem().equals("ARS -> USD")) {
 				r = input / 199.65;
 
