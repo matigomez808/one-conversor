@@ -5,8 +5,14 @@
 Este proyecto consiste en desarrollar una desktop app en Java para la conversión de moneda principalmente.
 También podremos agregar otras conversiones como extras. 
 
-Mi plan será llevar a cabo la estructura básica primero con temperatura y algunas unidades de medida y luego encarar la conversión de monedas haciendo uso de alguna API que proporcione datos actualizados de los valores de las monedas. 
-Planteo el proceso de esta forma porque las unidades de medida como metros, pies, grados celsius y grados farenheit mantienen una relación estática entre sí. Mientras que los datos referidos a tipos de cambio son variables y cambian en algunos casos a diario. 
+#### Progreso:
+
+7/3/23
+En la primera iteración la aplicación puede convertir todas las monedas a Peso Argentino y viceversa. 
+Las tarifas de cambio estan *hardcoded* en la aplicación. 
+
+Para la proxima versión la idea es agregar las otras opciones de conversion.
+Junto con eso otros paneles que se encarguen de contener las opciones y de guiar ordenadamente el proceso. 
 
 Requisitos:
 
