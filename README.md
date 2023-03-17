@@ -8,6 +8,7 @@ También podremos agregar otras conversiones como extras.
 #### Progreso:
 
 7/3/23
+
 En la primera iteración la aplicación puede convertir todas las monedas a Peso Argentino y viceversa. 
 Las tarifas de cambio estan *hardcoded* en la aplicación. 
 
