@@ -11,8 +11,17 @@ También podremos agregar otras conversiones como extras.
 En la primera iteración la aplicación puede convertir todas las monedas a Peso Argentino y viceversa. 
 Las tarifas de cambio estan *hardcoded* en la aplicación. 
 
-Para la proxima versión la idea es agregar las otras opciones de conversion.
-Junto con eso otros paneles que se encarguen de contener las opciones y de guiar ordenadamente el proceso. 
+17/3/23
+
+En esta segunda iteración del programa encaré una reestructuración general del proyecto.
+En la primera versión la programación era mas bien *funcional*, todo el código se resolvía en un gran archivo. 
+Para la segunda forma del challenge decidí volcarme de lleno a la *OOP* y decidí usar el modelo *MVC*. 
+Además algunas de las cuestiones con las que quería avanzar originalmente fueron desplazadas a un segundo plano en pos de poder llegar a implementar la conexión con una *Api* para tener información actualizada. 
+
+
+
+
+### Consigna
 
 Requisitos:
 
