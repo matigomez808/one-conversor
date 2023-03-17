@@ -1,2 +1,7 @@
 /bin/images/
 /src/images/
+/bin/
+/target/
+/src/modelo/ApiKey.java
+/target/classes/modelo/ApiKey.class
+/src/modelo/LlamadoApi.java
