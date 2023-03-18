@@ -27,8 +27,11 @@ public class Controlador {
 			int monto;
 			String monedaPrimaria, monedaSecundaria;
 			Float result = null;
-
+			
+			try {
 			monto = v.getValor();
+			
+			
 			monedaPrimaria = v.getMonedaPrimaria();
 			monedaSecundaria = v.getMonedaSecundaria();
 
@@ -47,7 +50,10 @@ public class Controlador {
 			}
 
 			v.setResultado(m.getResultadoConversion());
-
+			}
+			catch(NumberFormatException ex) {
+				v.mostrarMensajeError("Error. Ingrese un número entero.");
+			}
 		}
 
 		

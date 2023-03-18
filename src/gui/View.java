@@ -97,7 +97,7 @@ public class View extends JFrame {
 		btnCerrar.addActionListener(listenBtnCerrar);
 	}
 	
-	void mostrarMensajeError (String mensajeError) {
+	public void mostrarMensajeError (String mensajeError) {
 		JOptionPane.showMessageDialog(this, mensajeError);
 	}
 
