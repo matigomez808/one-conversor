@@ -1,5 +1,8 @@
 # Conversor de monedas
 
+https://youtu.be/mTa_xtn81y8
+
+
 ### Un sprint dentro del programa Oracle Next Education en Alura LatAm
 
 Este proyecto consiste en desarrollar una desktop app en Java para la conversión de moneda principalmente.
