@@ -43,8 +43,11 @@ public class View extends JFrame {
 		comboMonedaSecundaria.setModel(new DefaultComboBoxModel<String>(new String[] { "ARS", "USD", "EUR", "GBP", "JPY", "KPW" }));
 		lblValorConvertir = new JLabel("Valor a convertir");
 		valor = new JTextField(15);
+		valor.setHorizontalAlignment(SwingConstants.CENTER);
 		btnConvertir = new JButton("Convertir");
 		resultado = new JTextField(15);
+		resultado.setEditable(false);
+		resultado.setHorizontalAlignment(SwingConstants.CENTER);
 		btnCerrar = new JButton("Cerrar");
 		ventanaConversor.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		

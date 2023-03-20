@@ -26,7 +26,7 @@ public class Controlador {
 		public void actionPerformed(ActionEvent e) {
 			int monto;
 			String monedaPrimaria, monedaSecundaria;
-			Float result = null;
+			
 			
 			try {
 			monto = v.getValor();
